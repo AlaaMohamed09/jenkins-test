@@ -1,29 +1,23 @@
 pipeline {
-    agent {
-        // Specify the agent (where the build runs)
-        // e.g., 'docker', 'node', 'label', 'any', etc.
-    }
+    agent any #1
     stages {
-        // Define your build stages here
-        stage('Build') {
+        stage('Build') { #2
             steps {
-                // Define steps for the 'Build' stage
-                echo 'building the application'
+                //#3
+                echo ' building the application'
             }
         }
-        stage('Test') {
+        stage('Test') { #4
             steps {
-                // Define steps for the 'Test' stage
-                echo 'testing the application'
+                //#5
+                echo ' testing the application'
             }
         }
-
-                stage('Deploy') {
+        stage('Deploy') { #6
             steps {
-                // Define steps for the 'Test' stage
-                echo 'deploying the application'
+                //#7
+                echo ' deploying the application'
             }
         }
-        // Add more stages as needed
     }
-    }
+}
